@@ -2,13 +2,13 @@ body {
   margin: 0;
   background: #fee3d7;
   color: #333;
-  font-family: "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
-  font-size: 13px;
-  line-height: 1.6;
+  font-family: "Yu Mincho";
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .page {
-  width: 760px;
+  width: min(94%, 900px);
   margin: 20px auto;
   padding: 10px 15px;
   background: #fff;
@@ -33,6 +33,10 @@ header p {
 }
 
 nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
   padding: 8px;
   text-align: center;
   background: #fee3d7;
@@ -40,6 +44,9 @@ nav {
 }
 
 nav a {
+  display: inline-block;
+  padding: 4px 6px;
+  white-space: nowrap;
   margin: 0 6px;
   color: #ff3399;
   font-weight: bold;
@@ -71,6 +78,18 @@ section {
   padding: 10px;
   border: 1px solid #f067a6;
   background: #fafafa;
+}
+
+.info{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+}
+
+@media(max-width:700px){
+  .info{
+    grid-template-columns:1fr;
+  }
 }
 
 section h2 {
